@@ -61,12 +61,6 @@ jobs:
       - name: List build artifacts
         run: |
           ls -la dist
-          ls -la *.zip
-          # Verify executable exists in the zip file
-          for zipfile in *.zip; do
-          echo "Contents of $zipfile:"
-          7z l "$zipfile"
-          done
         shell: bash
 
       - name: Upload build artifacts
